@@ -37,11 +37,11 @@ Nếu chúng ta thay đổi thuật toán này một chút, chúng ta có thể 
 
     int[] fib = new int[max]; 
     int findFibonacci(int i) { 
-    if (i == 0) return 0; 
-    if (i == 1) return 1;
-    if (fib[i] != 0) return fib[i]; // Return cached result. 
-    fib[i] = findFibonacci(i - 1) + findFibonacci(i - 2); // Cache result 
-    return fib[i];
+		if (i == 0) return 0; 
+		if (i == 1) return 1;
+		if (fib[i] != 0) return fib[i]; // Return cached result. 
+		fib[i] = findFibonacci(i - 1) + findFibonacci(i - 2); // Cache result 
+		return fib[i];
     }
     
 Trong khi pháp đầu tiên cần khoảng 1 phút để tìm ra số Fibonacci thứ 50 thì giải pháp sau có thể tìm ra số Fibonacci thứ  10,000 chỉ trong vòng chưa đển một mili giây (Tất nhiên, nếu sử dụng code y như trên thì kết quả sẽ bị tràn do sử dụng kiểu int).
